@@ -123,6 +123,9 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/hw/camera.vendor.msm8952.so|libshims_camera_native.so
+
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
