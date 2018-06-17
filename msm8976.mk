@@ -81,6 +81,10 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     Snap
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshims_camera_native
+
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
