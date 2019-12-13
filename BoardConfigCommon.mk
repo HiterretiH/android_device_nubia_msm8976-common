@@ -61,6 +61,9 @@ TARGET_KERNEL_SOURCE := kernel/nubia/msm8976
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+# Properties
+BOARD_VNDK_RUNTIME_DISABLE := true
+
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
