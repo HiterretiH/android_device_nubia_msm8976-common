@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
+    
+# ConfigPanel
+PRODUCT_PACKAGES += \
+    ConfigPanel
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
@@ -144,8 +148,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0_vendor
     
 # Doze mode
-#PRODUCT_PACKAGES += \
-#    NubiaDoze
+PRODUCT_PACKAGES += \
+    NubiaDoze
 
 # DRM
 PRODUCT_PACKAGES += \
