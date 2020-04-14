@@ -1,10 +1,10 @@
-# Copyright (c) 2016, nubia. All rights reserved.
+# Copyright (c) 2016-2020, nubia. All rights reserved.
 #
-# init.nb.rc
-# For all nubia projects defined in device/zte
+# init.nb.common.rc
+# For all nubia projects defined in device/nubia
 
 #import init.nb.sensor.rc
-
+    # fingerprint (fpc for nx569j & nx589j)
 service gx_fpd /system/vendor/bin/gx_fpd
     class core
     user system
@@ -12,18 +12,18 @@ service gx_fpd /system/vendor/bin/gx_fpd
     writepid /dev/cpuset/system-background/tasks
 
 on early-boot
-     # SSR Setup
+    # SSR Setup
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
 
 on boot
-# start fpc fingerprint for nx591j
+    # fingerprint (fpc for nx591j) 
     mkdir /dev/fpcSocket 0770 system system
     chmod -R 0777 /dev/fpcSocket
-# end fpc fingerprint for nx591j
 
+    # cpuset (for camera)
     # Update foreground cpuset now that processors are up
     # reserve CPU 3 for the top app and camera daemon
     write /dev/cpuset/foreground/cpus 0-2,4-5
@@ -41,5 +41,6 @@ on boot
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    # fingerprint (fpc for nx591j)
 on property:persist.sys.fp.onstart=1
    start fps_hal
