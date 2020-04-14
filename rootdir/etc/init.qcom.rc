@@ -31,6 +31,10 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.nb.common.rc
+# for nubia nx589j
+import /vendor/etc/init/hw/init.nb.nx589j.rc
+# for nubia nx591j
+import /vendor/etc/init/hw/init.nb.nx591j.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
