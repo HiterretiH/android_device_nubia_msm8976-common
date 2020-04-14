@@ -33,13 +33,13 @@ bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
 
 # Camera
+vendor.camera.aux.packagelist=com.android.camera,org.mokee.snap,com.google.android.GoogleCameraTele
+vendor.camera.hal1.packagelist=com.intsig.camscanner,com.tencent.mm,com.tencent.mobileqq,com.eg.android.AlipayGphone
 media.camera.ts.monotonic=1
 camera.lowpower.record.enable=1
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+camera.hal1.packagelist=com.intsig.camscanner,com.tencent.mm,com.tencent.mobileqq,com.eg.android.AlipayGphone
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
-vidc.enc.dcvs.extra-buff-count=2
-camera.aux.packagelist=com.android.camera,cn.nubia.factory,org.codeaurora.snapcam,org.mokee.snap
 
 # CNE/DPM
 persist.cne.feature=1
